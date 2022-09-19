@@ -19,7 +19,14 @@ Use CYBAVO Wallet App SDK to easily develop secure wallets for your users withou
   s.dependency 'ObjectMapper', '~> 3.5.1'
   s.dependency 'AlamofireObjectMapper', '~> 5.2.1'
   s.dependency 'Alamofire', '~> 4.9.0'
-  s.dependency 'CryptoSwift', '1.0.0'
+  s.dependency 'CryptoSwift', '~> 1.3.8'
   s.dependency 'SwiftyUserDefaults', '4.0.0'
   s.dependency 'SwiftOTP', '2.0.0'
+  s.dependency 'Web3'
+  s.dependency 'Web3/ContractABI'
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
 end
