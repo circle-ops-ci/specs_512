@@ -1,30 +1,32 @@
 Pod::Spec.new do |s|
-  s.name         = "CYBAVOAuth"
+  s.name         = "CYBAVOWallet"
   s.version      = "LIB_VERSION"
-  s.summary      = "CYBAVO Auth APP SDK for iOS."
+  s.summary      = "CYBABO Wallet APP SDK for iOS."
   s.description  = <<-DESC
-Use CYBAVO Auth App SDK to easily develop app with authentication.
+Use CYBAVO Wallet App SDK to easily develop secure wallets for your users without having to code any cryptography on your side. Our SDK allows you to perform the most common operations, such as creating a wallet, querying balances and executing cryptocurrency payments.
                    DESC
 
-  s.homepage     = "https://www.cybavo.com/cybavo-vault/"
+  s.homepage     = "https://www.cybavo.com/wallet-app-sdk/"
   s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
   s.author             = { "CYBAVO" => "dev@cybavo.com" }
   s.platform     = :ios, "11.0"
-  s.source       = { :git => "ssh://git@bitbucket.org/cybavo/auth-ios_sdk_snapshot.git", :tag => "auth_LIB_VERSION" }
+  s.source       = { :git => "ssh://git@bitbucket.org/cybavo/ios_sdk_snapshot.git", :tag => "hw_LIB_VERSION" }
   s.source_files  = "**/*.{h}"
   s.exclude_files = "Classes/Exclude"
   s.swift_version = '4.2.1'
-  s.ios.vendored_frameworks = 'CYBAVOAuth.framework'
-  s.resources = ['CYBAVOAuth.framework/AuthSDK.plist']
+  s.ios.vendored_frameworks = 'CYBAVOWallet.framework'
+  s.resources = ['CYBAVOWallet.framework/WalletSDK.plist', 'CYBAVOWallet.framework/*.nib']
   s.dependency 'ObjectMapper', '~> 3.5.1'
   s.dependency 'AlamofireObjectMapper', '~> 5.2.1'
   s.dependency 'Alamofire', '~> 4.9.0'
   s.dependency 'CryptoSwift', '~> 1.3.8'
   s.dependency 'SwiftyUserDefaults', '4.0.0'
   s.dependency 'SwiftOTP', '2.0.0'
-  s.dependency 'CYBAVOLibmsec', '~> 1.0.0'
+  s.dependency 'Web3'
+  s.dependency 'Web3/ContractABI'
   s.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
 end
