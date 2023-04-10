@@ -10,7 +10,7 @@ Use CYBAVO mobile security lib easily develop app with security check.
   s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
   s.author             = { "CYBAVO" => "dev@cybavo.com" }
   s.platform     = :ios, "11.0"
-  s.source       = { :git => "ssh://git@bitbucket.org/cybavo/libmsec-sdk_ios_release.git", :tag => "swift512_1.0.92" }
+  s.source       = { :git => "https://github.com/CYBAVO/specs_512.git", :tag => "swift512_1.0.92" }
   s.source_files  = "**/*.{h}"
   s.exclude_files = "Classes/Exclude"
   s.swift_version = '4.2.1'
